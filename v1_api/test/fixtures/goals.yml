@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  goal_name: MyString
+  goal_desc: MyString
+  icon_url: MyString
+  is_public: false
+
+two:
+  goal_name: MyString
+  goal_desc: MyString
+  icon_url: MyString
+  is_public: false
