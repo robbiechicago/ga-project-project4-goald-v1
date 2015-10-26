@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/goals'
-
-  get 'users/projects'
-
-  get 'users/events'
+  resources :users
+  resources :goals
+  resources :projects
+  resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
