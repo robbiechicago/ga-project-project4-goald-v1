@@ -36,3 +36,24 @@ g27 = Goal.create(more_less: 'less', category: 'food', goal_thing: 'take-away', 
 g28 = Goal.create(more_less: 'less', category: 'food', goal_thing: 'crisps', is_public: true, icon_url: '')
 g29 = Goal.create(more_less: 'less', category: 'drink', goal_thing: 'soda', is_public: true, icon_url: '')
 g30 = Goal.create(more_less: 'less', category: 'drink', goal_thing: 'sugary drinks', is_public: true, icon_url: '')
+
+u1 = User.create(name: 'Rob Holloway')
+u2 = User.create(name: 'Philomena Cunk')
+
+e1 = Event.create(user_id: 1, goal_id: 2)
+e2 = Event.create(user_id: 1, goal_id: 12)
+e3 = Event.create(user_id: 1, goal_id: 29)
+e4 = Event.create(user_id: 2, goal_id: 5)
+e5 = Event.create(user_id: 2, goal_id: 7)
+e6 = Event.create(user_id: 2, goal_id: 16)
+e7 = Event.create(user_id: 2, goal_id: 22)
+e8 = Event.create(user_id: 2, goal_id: 26)
+
+
+
+
+
+
+
+
+
