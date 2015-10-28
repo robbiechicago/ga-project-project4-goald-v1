@@ -6,17 +6,17 @@ userIdCtrl.$inject = ['$http', '$state', '$stateParams'];
 function userIdCtrl($http, $state, $stateParams) {
   
   var self = this;
-
+  var id = $stateParams.id  
   self.getUser = getUser;
 
-  function getUser(user_id) {
-    console.log('running getUser()')
+
+  function getUser() {
     $http
-      .get('http://localhost:3000/users/' + user_id)
+      .get('http://localhost:3000/users/' + id)
       .then(function(response) {
-        console.log('user_id', response.data)
         self.user = response.data
-        $state.go('arse', { id:user_id })
       })
   }
+
+  getUser()
 }

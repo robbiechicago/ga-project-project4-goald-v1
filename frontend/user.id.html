@@ -1,5 +1,6 @@
 <p>this is the single user page.  Congratulations on getting here.</p>
 
-<section ng-controller="userCtrl as users">
-  <p>selected user id = {{ users.id }}</p>
+<section ng-controller="userIdCtrl as user">
+  <p>selected user id = {{ user.user.id }}</p>
+  <p>selected user name = {{ user.user.name }}</p>
 </section>

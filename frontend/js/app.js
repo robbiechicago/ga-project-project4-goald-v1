@@ -15,7 +15,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       url: '/user',
       templateUrl: 'user.html'
     })
-    .state('arse', {
+    .state('userId', {
       url: '/user/:id',
       templateUrl: 'user.id.html'
     })
