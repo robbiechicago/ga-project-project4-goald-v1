@@ -8,8 +8,7 @@ class GoalsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:project_id])
-    @goal = Goal.where(:project_id => @project)
+    @goal = Goal.find(params[:id])
 
     render json: @goal
   end

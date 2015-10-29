@@ -7,4 +7,10 @@ class ProjectsController < ApplicationController
     render json: @projects, include: [:goal, :events]
   end
 
+  def show
+    @Project = Project.find(params[:id])
+
+    render json: @Project, include: [:goal, :events]
+  end
+
 end
