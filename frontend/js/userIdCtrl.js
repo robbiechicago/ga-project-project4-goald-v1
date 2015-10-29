@@ -5,7 +5,7 @@ userIdCtrl.$inject = ['$http', '$state', '$stateParams'];
 
 function userIdCtrl($http, $state, $stateParams) {
   
-  var self = this;
+  var self = this;  
   var id = $stateParams.id  
 
   self.getUser = getUser;
@@ -17,17 +17,17 @@ function userIdCtrl($http, $state, $stateParams) {
       .then(function(response) {
         self.user = response.data
       })
-    getUserEvents()
+    getUserProjects()
   }
 
-  self.getUserEvents = getUserEvents;
-  function getUserEvents() {
+  self.getUserProjects = getUserProjects;
+  function getUserProjects() {
     $http
-      .get('http://localhost:3000/users/' + id + '/events')
+      .get('http://localhost:3000/users/' + id + '/projects')
       .then(function(response) {
-        console.log('response:')
-        console.log(response)
-        self.events = response.data
+        self.projects = response.data
+        console.log('this is what should be ng-repeating:')
+        console.log(self.projects)
       })
   }
 

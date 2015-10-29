@@ -3,4 +3,17 @@
 <section ng-controller="userIdCtrl as user">
   <p>selected user id = {{ user.user.id }}</p>
   <p>selected user name = {{ user.user.name }}</p>
+  
+
+  <div>
+    <div class="goal-container" ng-repeat-start="project in user.projects">
+      <div class="goal-box {{ project.more_less }}" ng-click=>
+        <div class="goals-cat">{{ project.category }}</div>
+        <div class="goals-thing">{{ project.goal_thing }}</div>
+      </div>
+      <p>view activity</p>
+    </div>
+    <b ng-repeat-end></b>
+  </div>  
+
 </section>

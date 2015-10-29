@@ -40,14 +40,14 @@ g30 = Goal.create(more_less: 'less', category: 'drink', goal_thing: 'sugary drin
 u1 = User.create(name: 'Rob Holloway')
 u2 = User.create(name: 'Philomena Cunk')
 
-e1 = Event.create(user_id: 1, goal_id: 2)
-e2 = Event.create(user_id: 1, goal_id: 12)
-e3 = Event.create(user_id: 1, goal_id: 29)
-e4 = Event.create(user_id: 2, goal_id: 5)
-e5 = Event.create(user_id: 2, goal_id: 7)
-e6 = Event.create(user_id: 2, goal_id: 16)
-e7 = Event.create(user_id: 2, goal_id: 22)
-e8 = Event.create(user_id: 2, goal_id: 26)
+e1 = Project.create(user_id: 1, goal_id: 2)
+e2 = Project.create(user_id: 1, goal_id: 12)
+e3 = Project.create(user_id: 1, goal_id: 29)
+e4 = Project.create(user_id: 2, goal_id: 5)
+e5 = Project.create(user_id: 2, goal_id: 7)
+e6 = Project.create(user_id: 2, goal_id: 16)
+e7 = Project.create(user_id: 2, goal_id: 22)
+e8 = Project.create(user_id: 2, goal_id: 26)
 
 
 
