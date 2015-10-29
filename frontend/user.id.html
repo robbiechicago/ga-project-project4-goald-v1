@@ -5,9 +5,9 @@
   <p>selected user name = {{ user.user.name }}</p>
   
 
-  <div>
+  <div ng-controller="eventCtrl as event">
     <div class="goal-container" ng-repeat-start="project in user.projects">
-      <div class="goal-box {{ project.more_less }}" ng-click=>
+      <div class="goal-box {{ project.more_less }}" ng-click="event.newEvent(project.id, project.created_at, user.user.id)">
         <div class="goals-cat">{{ project.category }}</div>
         <div class="goals-thing">{{ project.goal_thing }}</div>
       </div>
