@@ -24,6 +24,7 @@ function userCtrl($http, $state, $stateParams) {
   self.getUser = getUser;
 
   function getUser(user_id) {
+    console.log('boomting')
     $state.go('userId', { id:user_id })
   }
 }

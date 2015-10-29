@@ -6,12 +6,12 @@
   
 
   <div ng-controller="eventCtrl as event">
-    <div class="goal-container" ng-repeat-start="project in user.projects">
-      <div class="goal-box {{ project.more_less }}" ng-click="event.newEvent(project.id, project.created_at, user.user.id)">
-        <div class="goals-cat">{{ project.category }}</div>
-        <div class="goals-thing">{{ project.goal_thing }}</div>
+    <div class="goal-container" ng-repeat-start="goal in user.goals">
+      <div class="goal-box {{ goal.more_less }}" ng-click="event.newEvent(project.id, project.goal_id, project.created_at, user.user.id)">
+        <div class="goals-cat">{{ goal.category }}</div>
+        <div class="goals-thing">{{ goal.goal_thing }}</div>
       </div>
-      <p>view activity</p>
+      <p ng-click="event.getProjectEvents(project.id, user.user.id)">view activity</p>
     </div>
     <b ng-repeat-end></b>
   </div>  

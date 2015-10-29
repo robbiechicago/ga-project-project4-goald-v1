@@ -1,4 +1,5 @@
 class Goal < ActiveRecord::Base
-  has_many :users, through: :project
-  has_many :events, through: :project
+  has_many :projects
+  has_many :users, through: :projects
+  # has_many :events, through: :project
 end

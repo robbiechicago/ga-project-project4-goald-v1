@@ -1,4 +1,4 @@
 class Event < ActiveRecord::Base
   belongs_to :user
-  belongs_to :goal
+  belongs_to :project
 end

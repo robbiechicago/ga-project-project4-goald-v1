@@ -2,17 +2,21 @@ class GoalsController < ApplicationController
 
   before_filter :set_headers 
 
-  # GET /goals
-  # GET /goals.json
   def index
-    @goals = Goal.all
 
     render json: @goals
   end
 
+  def show
+    @project = Project.find(params[:project_id])
+    @goal = Goal.where(:project_id => @project)
+
+    render json: @goal
+  end
+
   def options
     set_headers
-    # this will send an empty request to the clien with 200 status code (OK, can proceed)
+    # this will send an empty request to the client with 200 status code (OK, can proceed)
     render :text => '', :content_type => 'text/plain'
   end
 
